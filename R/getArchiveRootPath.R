@@ -22,13 +22,13 @@
 # @author
 #
 # \seealso{
-#  Too set the directory where archived files are stored, 
+#  Too set the directory where archived files are stored,
 #  see @see "setArchiveRootPath".
 # }
 #
 # @keyword "programming"
 # @keyword "IO"
-#*/######################################################################### 
+#*/#########################################################################
 setMethodS3("getArchiveRootPath", "default", function(defaultPath="~/.Rarchive", ...) {
   getArchiveOption("rootPath", defaultPath);
 })
@@ -63,13 +63,13 @@ setMethodS3("getArchiveRootPath", "default", function(defaultPath="~/.Rarchive",
 #
 # @keyword "programming"
 # @keyword "IO"
-#*/######################################################################### 
+#*/#########################################################################
 setMethodS3("setArchiveRootPath", "default", function(path="~/.Rarchive", ...) {
   if (!is.null(path)) {
     path <- as.character(path);
 
     if (!isDirectory(path)) {
-      mkdirs(path);
+      mkdirs(path, mustWork=TRUE)
       if (!isDirectory(path))
         throw("Could not create archive directory: ", path);
     }
