@@ -66,18 +66,13 @@ setMethodS3("getArchiveRootPath", "default", function(defaultPath="~/.Rarchive",
 #*/#########################################################################
 setMethodS3("setArchiveRootPath", "default", function(path="~/.Rarchive", ...) {
   if (!is.null(path)) {
-    path <- as.character(path);
-
-    if (!isDirectory(path)) {
-      mkdirs(path, mustWork=TRUE)
-      if (!isDirectory(path))
-        throw("Could not create archive directory: ", path);
-    }
+    path <- as.character(path)
+    if (!isDirectory(path)) mkdirs(path, mustWork=TRUE)
   }
 
-  ovalue <- setArchiveOption("rootPath", path);
+  ovalue <- setArchiveOption("rootPath", path)
 
-  invisible(ovalue);
+  invisible(ovalue)
 })
 
 
