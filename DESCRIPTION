@@ -7,8 +7,8 @@ Imports:
   R.oo (>= 1.19.0),
   R.utils (>= 2.2.0)
 Suggests:
-  R.devices (>= 2.13.1)
-Date: 2015-12-11
+  R.devices (>= 2.13.2)
+Date: 2015-12-18
 Title: Automatic Copying of Objects and Files to a File-based Archive
 Authors@R: c(person("Henrik", "Bengtsson", role=c("aut", "cre", "cph"),
                                           email = "henrikb@braju.com"))
