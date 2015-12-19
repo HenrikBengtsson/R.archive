@@ -1,6 +1,9 @@
-
 Package: R.archive
 ==================
+
+Version: 0.3.1 [2015-12-18]
+o Updated package dependencies.
+
  
 Version: 0.3.0 [2013-10-28]
 o Updated package dependencies.
