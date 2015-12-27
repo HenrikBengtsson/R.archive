@@ -30,7 +30,7 @@
 # @keyword "programming"
 # @keyword "IO"
 # @keyword "internal"
-#*/#########################################################################  
+#*/#########################################################################
 setMethodS3("getArchivePath", "default", function(dirs=NULL, ...) {
   # Argument 'dirs'
   dirs <- Arguments$getCharacters(dirs);
@@ -45,7 +45,7 @@ setMethodS3("getArchivePath", "default", function(dirs=NULL, ...) {
   rootPath <- getArchiveRootPath();
   paths <- list(rootPath, dirs, datestamp);
   paths <- paths[sapply(paths, FUN=length) > 0];
-  path <- do.call("file.path", args=paths);
+  path <- do.call(file.path, args=paths);
   path <- Arguments$getWritablePath(path);
 
   path;
